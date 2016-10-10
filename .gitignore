@@ -1,3 +1,5 @@
 # IntelliJ project files
 .idea
+composer.lock
 vendor/
+index.php
