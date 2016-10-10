@@ -46,6 +46,26 @@ class Breadcrumb
     }
 
     /**
+     * Get the number of element in the breadcrumb
+     *
+     * @return int
+     */
+    public function count()
+    {
+        return count($this->breadcrumb);
+    }
+
+    /**
+     * Alias of the method count
+     *
+     * @return int
+     */
+    public function found()
+    {
+        return $this->count();
+    }
+
+    /**
      * Export the breadcrumb as an array and identify the first and last position
      *
      * @return array
