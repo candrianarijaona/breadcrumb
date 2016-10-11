@@ -1,5 +1,5 @@
 #Breadcrumb
-A simple php lib to manage breadcrumb.
+A simple php library to manage breadcrumb.
 
 ## Installation
 
