@@ -24,7 +24,7 @@
       "src/"
     ],
     "psr-4": {
-      "CAndri\\Breadcrumb\\": "src/"
+      "Candrianarijaona\\Breadcrumb\\": "src/"
     }
   }
 }
