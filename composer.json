@@ -24,7 +24,7 @@
       "src/"
     ],
     "psr-4": {
-      "Breadcrumb\\": "src/"
+      "CAndri\\Breadcrumb\\": "src/"
     }
   }
 }

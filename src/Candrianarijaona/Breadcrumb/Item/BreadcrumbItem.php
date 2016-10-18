@@ -1,14 +1,14 @@
 <?php
+
+
+namespace Candrianarijaona\Breadcrumb\Item;
+
 /**
- * Created by PhpStorm.
- * User: samue
- * Date: 11/10/2016
- * Time: 00:18
+ * This class represents an item in the breadcrumb
+ *
+ * Class BreadcrumbItem
+ * @package Candrianarijaona\Breadcrumb\Item
  */
-
-namespace Breadcrumb;
-
-
 class BreadcrumbItem
 {
     /** @var  string */

@@ -1,17 +1,22 @@
 <?php
+
+namespace Candrianarijaona\Breadcrumb;
+
+use Candrianarijaona\Breadcrumb\Item\BreadcrumbItem;
+
 /**
- * Created by PhpStorm.
- * User: candrianarijaona
- * Date: 11/10/2016
- * Time: 00:14
+ * Class Breadcrumb
+ *
+ * @package     Candrianarijaona\Breadcrumb
+ * @version     1.0
+ * @author      Claude Andrianarijaona
+ * @licence    MIT
+ * @copyright   (c) 2016, Claude Andrianarijaona
  */
-
-namespace Breadcrumb;
-
 
 class Breadcrumb
 {
-
+    /** @var array */
     protected $breadcrumb = [];
 
     /**

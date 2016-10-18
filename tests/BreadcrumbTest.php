@@ -1,21 +1,21 @@
 <?php
+
+namespace Candrianarijaona\Breadcrumb\Tests;
+
+use Candrianarijaona\Breadcrumb\Breadcrumb;
+
 /**
- * Created by PhpStorm.
- * User: samue
- * Date: 11/10/2016
- * Time: 00:57
+ * Unit test for the Breadcrumb Class
+ *
+ * Class BreadcrumbTest
+ * @package Candrianarijaona\Breadcrumb\Tests
  */
-
-namespace Breadcrumb\Tests;
-
-use Breadcrumb\Breadcrumb;
-
 class BreadcrumbTest extends \PHPUnit_Framework_TestCase
 {
     public function testInstanceOf()
     {
         $breadcrumb = new Breadcrumb('Home');
-        $this->assertInstanceOf('\Breadcrumb\Breadcrumb', $breadcrumb);
+        $this->assertInstanceOf('\Candrianarijaona\Breadcrumb\Breadcrumb', $breadcrumb);
     }
 
     public function testPushAndCount()
@@ -46,9 +46,9 @@ class BreadcrumbTest extends \PHPUnit_Framework_TestCase
         $breadcrumbItemTag = $breadcrumbArray[2];
 
         //Each element of the array should by an instance of BreadcrumbItem
-        $this->assertInstanceOf('\Breadcrumb\BreadcrumbItem', $breadcrumbItemHome);
-        $this->assertInstanceOf('\Breadcrumb\BreadcrumbItem', $breadcrumbItemArticle);
-        $this->assertInstanceOf('\Breadcrumb\BreadcrumbItem', $breadcrumbItemTag);
+        $this->assertInstanceOf('\Candrianarijaona\Breadcrumb\Item\BreadcrumbItem', $breadcrumbItemHome);
+        $this->assertInstanceOf('\Candrianarijaona\Breadcrumb\Item\BreadcrumbItem', $breadcrumbItemArticle);
+        $this->assertInstanceOf('\Candrianarijaona\Breadcrumb\Item\BreadcrumbItem', $breadcrumbItemTag);
 
         $this->assertEquals(true, $breadcrumbItemHome->isFirst());
         $this->assertEquals(false, $breadcrumbItemArticle->isFirst());
