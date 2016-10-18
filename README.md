@@ -14,7 +14,7 @@ php composer.phar require "candrianarijaona/breadcrumb:~1.0"
 Here is a simple usage of the library :
 
 ```php
-$breadcrumb = new \Breadcrumb\Breadcrumb('Home');
+$breadcrumb = new \Candrianarijaona\Breadcrumb\Breadcrumb('Home');
 $breadcrumb->push('Category', '/category');
 $breadcrumb->push('Article', '/category/article');
 
