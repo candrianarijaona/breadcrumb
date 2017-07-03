@@ -2,8 +2,6 @@
 
 namespace Breadcrumb;
 
-use Breadcrumb\Item\BreadcrumbItem;
-
 /**
  * Class Breadcrumb
  *
@@ -44,8 +42,8 @@ class Breadcrumb
      */
     public function push($label, $url = null)
     {
-        $breadcrumbItem = new BreadcrumbItem($label, $url);
-        $this->breadcrumb[] = $breadcrumbItem;
+        $item = new Item($label, $url);
+        $this->breadcrumb[] = $item;
 
         return $this;
     }

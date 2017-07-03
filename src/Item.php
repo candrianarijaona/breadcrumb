@@ -1,6 +1,6 @@
 <?php
 
-namespace Breadcrumb\Item;
+namespace Breadcrumb;
 
 /**
  * This class represents an item in the breadcrumb
@@ -8,7 +8,7 @@ namespace Breadcrumb\Item;
  * Class BreadcrumbItem
  * @package Breadcrumb\Item
  */
-class BreadcrumbItem
+class Item
 {
     /** @var  string */
     protected $label;

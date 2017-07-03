@@ -46,9 +46,9 @@ class BreadcrumbTest extends \PHPUnit_Framework_TestCase
         $breadcrumbItemTag = $breadcrumbArray[2];
 
         //Each element of the array should by an instance of BreadcrumbItem
-        $this->assertInstanceOf('Breadcrumb\Item\BreadcrumbItem', $breadcrumbItemHome);
-        $this->assertInstanceOf('Breadcrumb\Item\BreadcrumbItem', $breadcrumbItemArticle);
-        $this->assertInstanceOf('Breadcrumb\Item\BreadcrumbItem', $breadcrumbItemTag);
+        $this->assertInstanceOf('Breadcrumb\Item', $breadcrumbItemHome);
+        $this->assertInstanceOf('Breadcrumb\Item', $breadcrumbItemArticle);
+        $this->assertInstanceOf('Breadcrumb\Item', $breadcrumbItemTag);
 
         $this->assertEquals(true, $breadcrumbItemHome->isFirst());
         $this->assertEquals(false, $breadcrumbItemArticle->isFirst());
