@@ -20,11 +20,8 @@
     "phpunit/phpunit": "^4.0"
   },
   "autoload": {
-    "classmap": [
-      "src/"
-    ],
     "psr-4": {
-      "Candrianarijaona\\Breadcrumb\\": "src/"
+      "Breadcrumb\\": "src/"
     }
   }
 }

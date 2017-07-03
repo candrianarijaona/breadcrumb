@@ -1,8 +1,8 @@
 <?php
 
-namespace Candrianarijaona\Breadcrumb;
+namespace Breadcrumb;
 
-use Candrianarijaona\Breadcrumb\Item\BreadcrumbItem;
+use Breadcrumb\Item\BreadcrumbItem;
 
 /**
  * Class Breadcrumb

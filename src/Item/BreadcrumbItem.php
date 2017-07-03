@@ -1,13 +1,12 @@
 <?php
 
-
-namespace Candrianarijaona\Breadcrumb\Item;
+namespace Breadcrumb\Item;
 
 /**
  * This class represents an item in the breadcrumb
  *
  * Class BreadcrumbItem
- * @package Candrianarijaona\Breadcrumb\Item
+ * @package Breadcrumb\Item
  */
 class BreadcrumbItem
 {
