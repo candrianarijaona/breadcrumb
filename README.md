@@ -1,4 +1,5 @@
-#Breadcrumb
+# Breadcrumb
+
 A simple php library to manage breadcrumb.
 
 ## Installation
