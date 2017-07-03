@@ -5,8 +5,8 @@ namespace Breadcrumb;
 /**
  * This class represents an item in the breadcrumb
  *
- * Class BreadcrumbItem
- * @package Breadcrumb\Item
+ * Class Item
+ * @package Breadcrumb
  */
 class Item
 {

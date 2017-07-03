@@ -5,13 +5,12 @@ namespace Breadcrumb;
 /**
  * Class Breadcrumb
  *
- * @package     Candrianarijaona\Breadcrumb
+ * @package     Breadcrumb
  * @version     1.0
  * @author      Claude Andrianarijaona
  * @licence    MIT
  * @copyright   (c) 2016, Claude Andrianarijaona
  */
-
 class Breadcrumb
 {
     /** @var array */
