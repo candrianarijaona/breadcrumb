@@ -2,85 +2,56 @@
 
 namespace Breadcrumb;
 
+use Fig\Link\GenericLinkProvider;
+use Fig\Link\Link;
+
 /**
  * Class Breadcrumb
  *
  * @package     Breadcrumb
- * @version     1.0
+ * @version     2.0
  * @author      Claude Andrianarijaona
  * @licence    MIT
- * @copyright   (c) 2016, Claude Andrianarijaona
+ * @copyright   (c) 2017, Claude Andrianarijaona
  */
-class Breadcrumb
+class Breadcrumb extends GenericLinkProvider implements BreadcrumbInterface
 {
-    /** @var array */
-    protected $breadcrumb = [];
+    const FORMAT_HTML = 'html';
+
+    const FORMAT_JSON = 'json';
 
     /**
-     * Breadcrumb constructor.
-     *
-     * @param string $rootLabel
-     * @param string|null $rootUrl
-     */
-    public function __construct($rootLabel, $rootUrl = null)
-    {
-        //We suppose that if not provided, root is /
-        if (!$rootUrl) {
-            $rootUrl = '/';
-        }
-        $this->push($rootLabel, $rootUrl);
-    }
-
-    /**
-     * Add an element to the breadcrumb
-     *
-     * @param string $label
-     * @param string|null $url
-     *
-     * @return $this
-     */
-    public function push($label, $url = null)
-    {
-        $item = new Item($label, $url);
-        $this->breadcrumb[] = $item;
-
-        return $this;
-    }
-
-    /**
-     * Get the number of element in the breadcrumb
-     *
-     * @return int
+     * @inheritdoc
      */
     public function count()
     {
-        return count($this->breadcrumb);
+        // TODO: Implement count() method.
     }
 
     /**
-     * Alias of the method count
-     *
-     * @return int
+     * @inheritdoc
      */
-    public function found()
+    public function render($outputFormat = self::FORMAT_HTML, $listType = 'ol')
     {
-        return $this->count();
-    }
-
-    /**
-     * Export the breadcrumb as an array and identify the first and last position
-     *
-     * @return array
-     */
-    public function toArray()
-    {
-        $breadcrumb = $this->breadcrumb;
-        //Add indicator to indentify the first and last item.
-        if (count($breadcrumb)) {
-            $breadcrumb[0]->setFirst(true);
-            $breadcrumb[count($breadcrumb) - 1]->setLast(true);
+        switch ($outputFormat) {
+            case self::FORMAT_HTML :
+                return $this->renderHtml($listType);
+                break;
+            case self::FORMAT_JSON :
+                return $this->renderJson();
+                break;
+            default:
+                throw new \InvalidArgumentException('Unexpected format ' . $outputFormat);
         }
+    }
 
-        return $breadcrumb;
+    public function renderHtml($listType)
+    {
+
+    }
+
+    public function renderJson()
+    {
+
     }
 }
