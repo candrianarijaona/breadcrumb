@@ -20,9 +20,11 @@ class Builder implements BuilderInterface
         $link[] = $link;
     }
 
+    /**
+     * @inheritdoc
+     */
     public function build()
     {
-
+        return new Breadcrumb($this->links);
     }
-
 }

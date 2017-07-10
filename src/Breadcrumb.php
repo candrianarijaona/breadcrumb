@@ -16,8 +16,10 @@ use Fig\Link\Link;
  */
 class Breadcrumb extends GenericLinkProvider implements BreadcrumbInterface
 {
+    /** html output */
     const FORMAT_HTML = 'html';
 
+    /** json output */
     const FORMAT_JSON = 'json';
 
     /**
@@ -26,6 +28,13 @@ class Breadcrumb extends GenericLinkProvider implements BreadcrumbInterface
     public function count()
     {
         // TODO: Implement count() method.
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function removeAll()
+    {
     }
 
     /**

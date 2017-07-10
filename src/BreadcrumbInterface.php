@@ -13,11 +13,18 @@ interface BreadcrumbInterface
     public function count();
 
     /**
+     * Remove all items from the breadcrumb
+     *
+     * @return BreadcrumbInterface
+     */
+    public function removeAll();
+
+    /**
      * Render the breadcrumb according to the specified format
      *
      * @param string $outputFormat
      * @param string $listType
-     * 
+     *
      * @return string
      */
     public function render($outputFormat, $listType);
