@@ -7,7 +7,10 @@ use Fig\Link\Link;
 
 class Builder implements BuilderInterface
 {
-
+    /**
+     * Array containing the elements for the breadcrumb
+     * @var array
+     */
     protected $links = [];
 
     public function addLink($label, $url = '', $name = '')
@@ -17,7 +20,9 @@ class Builder implements BuilderInterface
             ->withHref($url)
             ->withRel($name ?: $label);
 
-        $link[] = $link;
+        $this->links[] = $link;
+
+        return $this;
     }
 
     /**

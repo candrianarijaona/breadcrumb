@@ -3,7 +3,6 @@
 namespace Breadcrumb;
 
 use Fig\Link\GenericLinkProvider;
-use Fig\Link\Link;
 
 /**
  * Class Breadcrumb
@@ -27,14 +26,24 @@ class Breadcrumb extends GenericLinkProvider implements BreadcrumbInterface
      */
     public function count()
     {
-        // TODO: Implement count() method.
+        return count($this->getLinks());
     }
 
     /**
-     * @inheritdoc
+     * @param $name
+     * @return Breadcrumb
      */
-    public function removeAll()
+    public function removeLinkByName($name)
     {
+        $that = clone($this);
+
+        if ($links = $this->getLinksByRel($name)) {
+            foreach ($links as $link) {
+                $that = $that->withoutLink($link);
+            }
+        }
+
+        return $that;
     }
 
     /**
@@ -54,11 +63,19 @@ class Breadcrumb extends GenericLinkProvider implements BreadcrumbInterface
         }
     }
 
+    /**
+     * For more information : https://developers.google.com/search/docs/data-types/breadcrumbs
+     * @inheritdoc
+     */
     public function renderHtml($listType)
     {
 
     }
 
+    /**
+     * For more information : https://developers.google.com/search/docs/data-types/breadcrumbs
+     * @inheritdoc
+     */
     public function renderJson()
     {
 
